@@ -7,3 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
         addTodo();
     });
 });
+
+function addTodo()
+{
+
+    const textTodo = getElementById("title").value;
+    const timestamp = getElementById("date").value;
+
+    console.log("todo "+texTodo);
+    console.log("timestamp "+timestap);
+}
