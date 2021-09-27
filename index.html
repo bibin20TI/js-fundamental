@@ -9,11 +9,16 @@
 
 
  <script>
- 	let mahasiswa = {
+   let mahasiswa = {
+   	    nama : "bibin aripin",  //object literal
+   	    energy : 10,
+   	    makan  :function(porsi){
+   	    	  this.energy = this.energy+porsi;
 
- 		nama: "bibin aripin",
- 		energy:10
- 	}
+   	    	  console.log(`hallo ${this.nama} , selamat makan`);
+   	    }
+   }
+
  </script>
 </body>
 </html>
