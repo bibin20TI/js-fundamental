@@ -9,14 +9,32 @@
 
 
  <script>
-       let mahasiswa = {
-       	        nama : "bibin aripn",
-       	        energy: 10,
-       	        makan : function(porsi){
-       	        	this.energy = this.energy + porsi;
-       	        }
+       // let mahasiswa = {
+       // 	        nama : "bibin aripn",    // object literal
+       // 	        energy: 10,
+       // 	        makan : function(porsi){
+       // 	        	this.energy = this.energy + porsi;
+       // 	        	console.log(`selamat makan ${this.nama}, dengan kenyang`);
+       // 	        	console.log(`energi anda bertaman menjadi ${this.energy}`);
+       // 	        }
+       // }
+
+       function Mahasiswa(nama,energy){
+          let mahasiswa = {};
+          mahasiswa.nama = nama;             // function deklaration 
+          mahasiswa.energy = energy;
+
+          mahasiswa.makan = function(porsi) {
+          	this.energy += porsi;
+          	console.log(`selamat makan ${this.nama}, sampai kenyang`);
+          }
+           
+           return mahasiswa;
        }
 
- </script>
+       let bibin = Mahasiswa("bibin",100);
+
+</script>
 </body>
 </html>
+
