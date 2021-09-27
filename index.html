@@ -28,11 +28,17 @@
           	this.energy += porsi;
           	console.log(`selamat makan ${this.nama}, sampai kenyang`);
           }
+
+          mahasiswa.main = function(jam) {
+          	this.energy -= jam;
+          	console.log(`energy ${this.nama} ,berkurang menjadi ${this.energy}`);
+          }
            
            return mahasiswa;
        }
 
        let bibin = Mahasiswa("bibin",100);
+       let abdul = Mahasiswa("abdul",200);
 
 </script>
 </body>
