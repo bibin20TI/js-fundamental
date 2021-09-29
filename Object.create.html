@@ -25,13 +25,10 @@
         }
 
        function Mahasiswa(nama,energy){
-        let mahasiswa = {};
+        let mahasiswa = Object.create(methodMahasiswa);
         mahasiswa.nama = nama;
         mahasiswa.energy = energy;
 
-        mahasiswa.makan = methodMahasiswa.makan;      
-        mahasiswa.main = methodMahasiswa.main;
-        mahasiswa.tidur = methodMahasiswa.tidur;
         return mahasiswa;
           
        }
