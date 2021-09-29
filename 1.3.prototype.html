@@ -10,14 +10,19 @@
   <script type="text/javascript">
   	
   	function Mahasiswa(nama,energy) {
-  		let this = Object.create(Mahasiswa.prototype);
   		
   		this.nama = nama;
   		this.energy = energy;
-
-
-  		return this;
   	}
+  	Mahasiswa.prototype.makan = function (porsi) {
+  		this.energy += porsi;
+
+  		return `hallo ${this.nama}, selamat makan`;
+  	}
+  		
+
+let bibin = new Mahasiswa("bibin",200);
+  		
   </script>
 </body>
 </html>
