@@ -12,7 +12,7 @@
        // let mahasiswa = {
        // 	        nama : "bibin aripn",    // object literal
        // 	        energy: 10,
-       // 	        makan : function(porsi){
+       // 	        makan : function(porsi){  // tidak efektikf ketika objeknya banyak
        // 	        	this.energy = this.energy + porsi;
        // 	        	console.log(`selamat makan ${this.nama}, dengan kenyang`);
        // 	        	console.log(`energi anda bertaman menjadi ${this.energy}`);
@@ -41,28 +41,32 @@
        // let abdul = Mahasiswa("abdul",200);
 
        // constructor function 
+        const methodMahasiswa = {
+          makan : function(porsi) {
+            this.energy += porsi;
+            console.log(`selamat makan ${this.nama}, sampai kenyang`);
+          },
+           main : function(jam) {
+            this.energy -= jam;
+            console.log(`energy ${this.nama} ,berkurang menjadi ${this.energy}`);
+          }
 
+        }
 
        function Mahasiswa(nama,energy){
-         
-          this.nama = nama;             // function deklaration 
-          this.energy = energy;
+        let mahasiswa = {};
+        mahasiswa.nama = nama;
+        mahasiswa.energy = energy;
 
-          this.makan = function(porsi) {
-          	this.energy += porsi;
-          	console.log(`selamat makan ${this.nama}, sampai kenyang`);
-          }
-
-          this.main = function(jam) {
-          	this.energy -= jam;
-          	console.log(`energy ${this.nama} ,berkurang menjadi ${this.energy}`);
-          }
-           
+        mahasiswa.makan = methodMahasiswa.makan;      
+        mahasiswa.main = methodMahasiswa.main;
+        
+        return mahasiswa;
           
        }
 
-       let bibin = new Mahasiswa("bibin",100);
-       let abdul = new Mahasiswa("abdul",200);
+       let bibin = Mahasiswa("bibin",100);
+       let abdul = Mahasiswa("abdul",200);
 
 
 

@@ -6,8 +6,40 @@
 </head>
 <body>
     <script>
-    	
-    	
+    	// ini adalah komentar
+    	const methodMahasiswa = {
+          makan : function(porsi) {
+            this.energy += porsi;
+            console.log(`selamat makan ${this.nama}, sampai kenyang`);
+          },
+           main : function(jam) {
+            this.energy -= jam;
+            console.log(`energy ${this.nama} ,berkurang menjadi ${this.energy}`);
+          },
+
+          tidur : function(jam) {
+          	this.energy += jam * 2;
+          	console.log(`selamat tidar ${this.nama} !!!`);
+          }
+
+        }
+
+       function Mahasiswa(nama,energy){
+        let mahasiswa = {};
+        mahasiswa.nama = nama;
+        mahasiswa.energy = energy;
+
+        mahasiswa.makan = methodMahasiswa.makan;      
+        mahasiswa.main = methodMahasiswa.main;
+        mahasiswa.tidur = methodMahasiswa.tidur;
+        return mahasiswa;
+          
+       }
+
+       let bibin = Mahasiswa("bibin",100);
+       let abdul = Mahasiswa("abdul",200);
+
+
     </script>
 </body>
-</html>
+</html>  
