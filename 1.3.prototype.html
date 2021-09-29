@@ -19,6 +19,18 @@
 
   		return `hallo ${this.nama}, selamat makan`;
   	}
+
+  	Mahasiswa.prototype.main = function (jam) {
+  		this.energy -= jam;
+
+  		return `hallo ${this.nama} selamat main !1`;
+  	}
+
+  	Mahasiswa.prototype.tidur = function (jam) {
+  		this.energy += jam * 2;
+
+  		return `hallo ${this.nama} ,selamat tidur`;
+  	}
   		
 
 let bibin = new Mahasiswa("bibin",200);
