@@ -9,31 +9,61 @@
 
   <script type="text/javascript">
   	
-  	function Mahasiswa(nama,energy) {
+//   	function Mahasiswa(nama,energy) {
   		
-  		this.nama = nama;
-  		this.energy = energy;
-  	}
-  	Mahasiswa.prototype.makan = function (porsi) {
-  		this.energy += porsi;
+//   		this.nama = nama;
+//   		this.energy = energy;
+//   	}
+//   	Mahasiswa.prototype.makan = function (porsi) {
+//   		this.energy += porsi;
 
-  		return `hallo ${this.nama}, selamat makan`;
-  	}
+//   		return `hallo ${this.nama}, selamat makan`;
+//   	}
 
-  	Mahasiswa.prototype.main = function (jam) {
-  		this.energy -= jam;
+//   	Mahasiswa.prototype.main = function (jam) {
+//   		this.energy -= jam;
 
-  		return `hallo ${this.nama} selamat main !1`;
-  	}
+//   		return `hallo ${this.nama} selamat main !1`;
+//   	}
 
-  	Mahasiswa.prototype.tidur = function (jam) {
-  		this.energy += jam * 2;
+//   	Mahasiswa.prototype.tidur = function (jam) {
+//   		this.energy += jam * 2;
 
-  		return `hallo ${this.nama} ,selamat tidur`;
-  	}
+//   		return `hallo ${this.nama} ,selamat tidur`;
+//   	}
   		
 
-let bibin = new Mahasiswa("bibin",200);
+// let bibin = new Mahasiswa("bibin",200);
+// membuat prototype versi class 
+
+class Mahasiswa {
+
+	constructor(nama,energy) {
+		this.nama = nama;
+		this.energy = energy;
+	}
+
+	makan (porsi) {
+		this.energy += porsi;
+
+		return `hallo ${this.nama} selamat makan`;
+	}
+
+	main (jam) {
+		this.energy -= jam * 2;
+
+		return `hallo ${this.nama} selamat main`;
+	}
+
+	tidur (jam) {
+		this.energy += jam;
+
+		return `hallo ${this.nama} selamat tidur`;
+	}
+}
+
+let bibin = new Mahasiswa("bibin",10);
+let zaenal = new Mahasiswa("zaenal",10);
   		
   </script>
 </body>
