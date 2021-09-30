@@ -36,30 +36,56 @@
 // let bibin = new Mahasiswa("bibin",200);
 // membuat prototype versi class 
 
-class Mahasiswa {
+// class Mahasiswa {
 
-	constructor(nama,energy) {
-		this.nama = nama;
-		this.energy = energy;
-	}
+// 	constructor(nama,energy) {
+// 		this.nama = nama;
+// 		this.energy = energy;
+// 	}
 
-	makan (porsi) {
-		this.energy += porsi;
+// 	makan (porsi) {
+// 		this.energy += porsi;
 
-		return `hallo ${this.nama} selamat makan`;
-	}
+// 		return `hallo ${this.nama} selamat makan`;
+// 	}
 
-	main (jam) {
-		this.energy -= jam * 2;
+// 	main (jam) {
+// 		this.energy -= jam * 2;
 
-		return `hallo ${this.nama} selamat main`;
-	}
+// 		return `hallo ${this.nama} selamat main`;
+// 	}
 
-	tidur (jam) {
-		this.energy += jam;
+// 	tidur (jam) {
+// 		this.energy += jam;
 
-		return `hallo ${this.nama} selamat tidur`;
-	}
+// 		return `hallo ${this.nama} selamat tidur`;
+// 	}
+// }
+
+function Mahasiswa(nama,energy) {
+
+	 this.nama = nama;
+	 this.energy = energy;
+}
+
+Mahasiswa.prototype.makan = function (porsi) {
+  
+  this.energy += porsi;
+
+  return `hallo selamat makan ${this.nama} semoga kenyan`;
+}
+
+Mahasiswa.prototype.main = function (jam) {
+	this.energy -= jam * 2;
+
+	return `hallo selamat main ${this.nama} `;
+}
+
+Mahasiswa.prototype.tidur = function (jam) {
+
+	this.energy += jam;
+
+	return `hallo selamat tidur ${this.nama}`;
 }
 
 let bibin = new Mahasiswa("bibin",10);
