@@ -7,15 +7,32 @@
 <body>
 <script >
 	
-     console.log(sayHello());
+     // console.log(sayHello());
 
-	var nama = "bibin aripin"
-	var kelas = "ti20c";
+	// var nama = "bibin aripin"
+	// var kelas = "ti20c";
 
-	function sayHello() {
+	// function sayHello() {
 
-		return `hallo ${nama} dari kelas ${kelas} ya`;
-	}
+	// 	return `hallo ${nama} dari kelas ${kelas} ya`;
+	// }
+
+	// atau untuk lebih jelasnya tentang execution context bisa lihat di google javaScript visualizer
+	// function membuat local execution context yang didalamnya terdapat createion dan execution phase
+	//windows
+	//arguments 
+	// dan juga hoisting
+	  var nama = "bibin aripin";
+	  var username = "bibinTI20";
+
+	  function cetakUrl(username) {
+
+	  	   var github = "bibinTI20.github.io";
+
+	  	   return `${username} , ${github}`;
+	  }
+
+	  console.log(cetakUrl(username));
 </script>
 </body>
 </html>
