@@ -7,14 +7,15 @@
 <body>
      <script>
      	function init () {
-     		let nama = "bibin aripin";
+     		// let nama = "bibin aripin";
 
-     		function tampilNama () {
+     		function tampilNama (nama) {
      			console.log(nama);
      		}
-     		tampilNama();
+     		return tampilNama;
      	}
-     	init();
+     	let panggil = init();
+     	panggil("zaenal");
      </script>
 </body>
 </html> 
