@@ -6,16 +6,29 @@
 </head>
 <body>
      <script>
-     	function init () {
-     		// let nama = "bibin aripin";
+     	// function init () {
+     	// 	// let nama = "bibin aripin";
 
-     		return function (nama) {
-     			console.log(nama);
-     		}
+     	// 	return function (nama) {
+     	// 		console.log(nama);
+     	// 	}
      		
+     	// }
+     	// let panggil = init();
+     	// panggil("zaenal");
+
+     	function ucapkanSalam(waktu) {
+     		return function(nama) {
+     			console.log(`hallo ${nama} selamat ${waktu},semoga harimu menyenangkan`);
+     		}
      	}
-     	let panggil = init();
-     	panggil("zaenal");
+
+     	let selamatPagi = ucapkanSalam("pagi");
+     	let selamatMalam = ucapkanSalam("malam");
+
+     	selamatPagi("bibin");
+     	selamatMalam("aripin");
+
      </script>
 </body>
 </html> 
