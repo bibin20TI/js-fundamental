@@ -28,18 +28,18 @@
 
      	// console.dir(selamatMalam);
 
-     	 let add = function () {
-     	let counter = 0;
-     	 	return function () {
-     	 		return ++counter;
-     	 	}
-     	 }
+     	 let add = (function () {
+     	      	let counter = 0;
+     	      	 	return function () {
+     	      	 		return ++counter;
+     	      	 	}
+     	      	 })();
 
-     	  let a = add();
+     	 
 
-     	 console.log(a());
-     	 console.log(a());
-     	 console.log(a());
+     	 console.log(add());
+     	 console.log(add());
+     	 console.log(add());
      </script>
 </body>
 </html> 
