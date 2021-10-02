@@ -17,18 +17,29 @@
      	// let panggil = init();
      	// panggil("zaenal");
 
-     	function ucapkanSalam(waktu) {
-     		return function(nama) {
-     			console.log(`hallo ${nama} selamat ${waktu},semoga harimu menyenangkan`);
-     		}
-     	}
+     	// function ucapkanSalam(waktu) {
+     	// 	return function(nama) {
+     	// 		console.log(`hallo ${nama} selamat ${waktu},semoga harimu menyenangkan`);
+     	// 	}
+     	// }
 
-     	let selamatPagi = ucapkanSalam("pagi");
-     	let selamatMalam = ucapkanSalam("malam");
+     	// let selamatPagi = ucapkanSalam("pagi");
+     	// let selamatMalam = ucapkanSalam("malam");
 
-     	selamatPagi("bibin");
-     	selamatMalam("aripin");
+     	// console.dir(selamatMalam);
 
+     	 let add = function () {
+     	let counter = 0;
+     	 	return function () {
+     	 		return ++counter;
+     	 	}
+     	 }
+
+     	  let a = add();
+
+     	 console.log(a());
+     	 console.log(a());
+     	 console.log(a());
      </script>
 </body>
 </html> 
